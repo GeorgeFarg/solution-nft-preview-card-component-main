@@ -1,0 +1,165 @@
+/*start global rules*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --main-color: hsl(217, 54%, 11%);
+    --dark-blue: hsl(216, 50%, 16%);
+    --dark-line: hsl(215, 32%, 27%);
+}
+body {
+    background-color: var(--main-color);
+    font-family:'Outfit', sans-serif;;
+}
+/*end global rules*/
+
+/*start card*/
+.card {
+    background-color: var(--dark-blue);
+    width: 300px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .image {
+    position: relative;
+}
+
+.card .image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 98.5%;
+    background-color: rgba(0, 255, 255, 50%);
+    border-radius: 10px;
+    z-index: 1;
+    background-image: url("../images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+
+.card .image img {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card .image:hover {
+    cursor: pointer;
+}
+.card .image:hover::before {
+    display: block;
+}
+.card .content h2 {
+    display: flex;
+    color: white;
+    text-transform: capitalize;
+    padding: 20px 0;
+}
+.card .content h2:hover {
+    color: cyan;
+    cursor: pointer;
+}
+.card .content > p{
+    color: var(--soft-blue);
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.card .content .buy{
+    padding: 20px 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .content .buy .price{
+    text-transform: uppercase;
+    height: 10px;
+    display: inherit;
+    align-items: center;
+    color: cyan;
+}
+
+.card .content .buy .price img{
+    width: 12px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.card .content .buy .dayleft{
+    display: inherit;
+    align-items: center;
+    color: var(--soft-blue);
+}
+
+.card .content .buy .dayleft img{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.card .content .creator {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid var(--dark-line);
+}
+
+.card .content .creator img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 15px;
+}
+
+.card .content .creator .creation{
+    color: var(--soft-blue);
+}
+.card .content .creator .creation span{
+    color: white;
+}
+.card .content .creator .creation span:hover{
+    color: cyan;
+    cursor: pointer;
+}
+footer {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%,-100%);
+}
+/*end card*/
+
+/*start footer*/
+
+footer p{
+    position: inherit;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    color: var(--soft-blue);
+}
+footer p a{
+    text-decoration: none;
+    color: cyan;
+}
+footer p a:hover{
+    text-decoration: underline;
+}
+
+/*end footer*/
